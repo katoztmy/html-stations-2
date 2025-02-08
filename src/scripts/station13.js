@@ -1,4 +1,12 @@
 function changeBackgroundColor(e) {
-  // ここに背景色を変える処理を書く。
-
+  console.log(e.target.checked)
+  const p = document.getElementById('text');
+  if (e.target.checked) {
+    p.style.backgroundColor = 'red'
+  } else {
+    p.style.backgroundColor = 'white'
+  }
 }
+
+const input = document.getElementById('check');
+input.addEventListener('click', changeBackgroundColor())
